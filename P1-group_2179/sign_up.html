@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="sign_up.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body class="main">
+  <!-- TODO: complete me --> 
+
+  <header>
+    <!-- Fixed navbar Used this as a starting point: https://www.codeply.com/p/P0KN7DNsEq--> 
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler flex-grow-sm-1 flex-grow-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar5">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="flex-grow-1 d-sm-none d-block"></div>
+
+            <!-- Items in this div don't collapse & are centered -->
+            <div class="flex-grow-1 order-sm-1 mx-auto">
+                <a class="navbar-brand mx-auto" href="index.html">
+                    <span class="mx-2"><img src="images/logo.png" alt="..." height="36"></span>
+                    Restify
+                </a>
+            </div>
+
+            <!-- Items in this div don't collapse & are right -->
+            <div class="order-sm-1 ms-auto">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item mx-3 mx-sm-0 dropdown"> <!--https://codepen.io/cristinaconacel/pen/XymvvO-->
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <!--https://www.flaticon.com/free-icon/bell_3602215-->
+                          <img src="images/bell.png" width="30" height="30" class="rounded-circle">
+                          <span class="badge rounded-pill badge-notification bg-danger position-absolute z-1" id="notif-badge">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end position-absolute" aria-labelledby="navbarDropdownMenuLink">
+                          <div class="dropdown-item">&#x2022; A user has commented on your property.</div>
+                          <div class="dropdown-item">&#x2022; A user has rated your property.</div>
+                          <div class="dropdown-item">&#x2022; A user has requested a reservation for your property.</div>
+                          <div>
+                            <a class="dropdown-item text-center" href="inbox.html">See All</a>
+                          </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown"> <!--https://codepen.io/cristinaconacel/pen/XymvvO-->
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="images/profile.png" width="30" height="30" class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end position-absolute" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item text-center" href="#">View Profile</a>
+                          <a class="dropdown-item text-center" href="#">Edit Profile</a>
+                          <div class="dropdown-divider"></div>
+                          <div class="dropdown-item text-center">
+                            <button class="btn btn-danger">Log Out</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Items in this div collapse & are left-->
+            <div class="navbar-collapse collapse flex-grow-1 me-auto order-sm-0" id="navbar5">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Rentals</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-shrink-0 bg-light">   
+
+
+
+  <form action="profile.html" method="GET" enctype="multipart/form-data">
+    <div class="container">
+      <h1 class="text-center">Sign Up</h1>
+      <p class="text-center"> Please fill in all the required information to create an account!</p>
+  
+      <!-- bold email, password, repeat password-->
+
+      <label for="first-name">First Name</label>
+      <br>
+      <input type="text" placeholder="Enter First Name" name="first-name" required>
+
+      <label for="last-name">Last Name</label>
+      <br>
+      <input type="text" placeholder="Enter Last Name" name="last-name" required>
+
+      <label for="phone-number">Phone Number</label>
+      <br>
+      <input type="tel" placeholder="Enter Phone Number" name="phone-number" required>
+      
+      <label for="email">Email</label>
+      <br>
+      <input type="email" placeholder="Enter Email" name="email" required>
+  
+      <br>
+      <label for="password">Password</label>
+      <br>
+      <input type="password" placeholder="Enter Password" name="password" required>
+  
+      <br>
+      <label for="repeat-password">Repeat Password</label>
+      <br>
+      <input type="password" placeholder="Repeat Password" name="repeat-password" required>
+
+      <label for="avatar">Avatar Icon</label>
+      <br>
+      <input type="file" name="avatar" required>
+  
+      <br>
+      <br>
+
+      <div class="buttons text-center">
+            <button type="submit" class="btn btn-danger" accept="image/png, image/gif, image/jpeg">Sign Up</button>
+      </div>
+    </div>
+  </form> 
+
+</main> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>

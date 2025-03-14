@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+    
+<!--HEADER-->
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+        <!-- Fixed navbar Used this as a starting point: https://www.codeply.com/p/P0KN7DNsEq--> 
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler flex-grow-sm-1 flex-grow-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar5">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="flex-grow-1 d-sm-none d-block"></div>
+
+                <!-- Items in this div don't collapse & are centered -->
+                <div class="flex-grow-1 order-sm-1" id="wrapper">
+                    <a class="navbar-brand mx-auto" href="index.html">
+                        <span class="mx-2"><img src="images/logo.png" alt="..." height="36"></span>
+                        Restify
+                    </a>
+                </div>
+
+                <!-- Items in this div don't collapse & are right -->
+                <div class="order-sm-1 ms-auto">
+                    <ul class="navbar-nav flex-row">
+                        <li class="nav-item mx-3 mx-sm-0 dropdown"> <!--https://codepen.io/cristinaconacel/pen/XymvvO-->
+                            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <!--https://www.flaticon.com/free-icon/bell_3602215-->
+                              <img src="images/bell.png" width="30" height="30" class="rounded-circle">
+                              <span class="badge rounded-pill badge-notification bg-danger position-absolute z-1" id="notif-badge">3</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end position-absolute" aria-labelledby="navbarDropdownMenuLink">
+                              <div class="dropdown-item">&#x2022; A user has commented on your property.</div>
+                              <div class="dropdown-item">&#x2022; A user has rated your property.</div>
+                              <div class="dropdown-item">&#x2022; A user has requested a reservation for your property.</div>
+                              <div>
+                                <a class="dropdown-item text-center" href="inbox.html">See All</a>
+                              </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown"> <!--https://codepen.io/cristinaconacel/pen/XymvvO-->
+                            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="images/profile.png" width="30" height="30" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end position-absolute" aria-labelledby="navbarDropdownMenuLink">
+                              <a class="dropdown-item text-center" href="profile.html">View Profile</a>
+                              <a class="dropdown-item text-center" href="edit-profile.html">Edit Profile</a>
+                              <div class="dropdown-divider"></div>
+                              <div class="dropdown-item text-center">
+                                <button class="btn btn-danger">Log Out</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Items in this div collapse & are left-->
+                <div class="navbar-collapse collapse flex-grow-1 me-auto order-sm-0" id="navbar5">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="my-listings.html">My Listings</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="my-reservations.html">My Reservations</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- MAIN -->
+    <main class="flex-shrink-0 bg-light">
+        <div id="hideoverflow">
+            <video autoplay muted loop playsinline>
+                <source src="images/video.mp4" type="video/mp4"> 
+            </video>
+            <div class="container-fluid position-absolute vw-100 d-flex justify-content-center" id="div-over-video-1">
+                <div class="text-center align-self-center">
+                  <h2 class="display-5 fw-bold text-white">GREETINGS TRAVELER</h1>
+                  <h5 class="text-white">Discover unforgettable accommodations worldwide, hosted by locals in over 190 countries.</h4>
+                </div>
+            </div>
+            <div class="container-fluid position-absolute vw-100 d-flex justify-content-center div-over-video-2">
+                <form id="searchform">
+                    <div class="row align-self-center justify-content-center d-flex rounded search-bar shady">
+                        <div class="col-lg-3 text-dark search-border">
+                            <div class="pt-2 pb-2 h-100">
+                                <div class="h-40 text-dark">CITY, COUNTRY</div>
+                                <div class="h-60">
+                                    <input class="form-control" placeholder="Toronto, Canada" type="text" name="location">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-dark search-border">
+                            <div class="row">
+                                <div class="col-6 search-border">
+                                    <div class="pt-2 pb-2 h-100">
+                                        <div class="h-40 text-dark">CHECK IN</div>
+                                        <div class="h-60">
+                                            <input type="date" class="form-control" name="check-in"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="pt-2 pb-2 h-100">
+                                        <div class="h-40 text-dark">CHECK OUT</div>
+                                        <div class="h-60">
+                                            <input type="date" class="form-control" name="check-out"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-dark">
+                            <div class="pt-2 pb-2 h-100">
+                                <div class="h-40 text-dark">GUESTS</div>
+                                <div class="h-60 justify-content-center d-flex">
+                                        <select class="form-select outline-none smaller" form="searchform" name="guests">
+                                            <option value="1">1 Guest</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5">5 Guests</option>
+                                            <option value="6">6 Guests</option>
+                                            <option value="7">7 Guests</option>
+                                            <option value="8">8 Guests</option>
+                                            <option value="9">9 Guests</option>
+                                            <option value="10">10 Guests</option>
+                                            <option value="11">11 Guests</option>
+                                            <option value="12">12 Guests</option>
+                                            <option value="13">13 Guests</option>
+                                            <option value="14">14 Guests</option>
+                                            <option value="15">15 Guests</option>
+                                            <option value="16">16+ Guests</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 text-dark rounded-end search">
+                            <div class="pt-2 pb-2 h-100">
+                                <input type="submit" class="w-100 h-100 d-block text-center d-flex justify-content-center align-items-center text-white fw-bold text-decoration-none search" value="SEARCH" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container-fluid" id="containy">
+          <div class="container-fluid d-flex mb-4">
+            <select class="ms-auto btn bg-white shadow" id="selector" onchange="myfunc()">
+              <option value="1">Popular</option>
+              <option value="2">Price: Low - High</option>
+              <option value="3">Price: High - Low</option>
+            </select>
+          </div>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6" id="prop1">
+                    <div class="card mb-3 border-0 shadow">
+                        <div id="carousel1" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <!-- Stock images from Pexels.com -->
+                            <!-- Carousel from https://getbootstrap.com/docs/5.3/components/carousel/ -->
+                            <!-- Card design from https://www.codingexercises.com/guides/building-bootstrap-layouts-part-11 -->
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/h11.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h12.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h13.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a class="card-link" href="listing1.html">
+                        <div class="m-2">
+                            <p class="small text-uppercase pb-0">Stockholm, Sweden</p>
+                            <div class="card-body p-0">
+                                <h5 class="card-title">The Scandinavian House</h5>
+                                <p class="card-text m-0">$310/night</p>
+                                <p class="small m-0 text-danger">&#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary"> 265</span></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6" id="prop2">
+                    <div class="card mb-3 border-0 shadow">
+                        <div id="carousel2" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/h21.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h22.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h23.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a class="card-link" href="listing2.html">
+                        <div class="m-2">
+                            <p class="small text-uppercase pb-0">Toronto, Canada</p>
+                            <div class="card-body p-0">
+                                <h5 class="card-title">The Brick House</h5>
+                                <p class="card-text m-0">$180/night</p>
+                                <p class="small m-0 text-danger">&#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary"> 465</span></p>
+                            </div>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6" id="prop3">
+                    <div class="card mb-3 border-0 shadow">
+                        <div id="carousel3" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/h31.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h32.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h33.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                      <a class="card-link" href="edit_listing.html">
+                        <div class="m-2">
+                            <p class="small text-uppercase pb-0">Toronto, Canada</p>
+                            <div class="card-body p-0">
+                                <h5 class="card-title">The Blue One</h5>
+                                <p class="card-text m-0">$100/night</p>
+                                <p class="small m-0 text-danger">&#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary"> 465</span></p>
+                            </div>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6" id="prop4">
+                    <div class="card mb-3 border-0 shadow">
+                        <div id="carousel4" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carousel4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carousel4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/h41.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h42.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h43.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a class="card-link" href="listing4.html">
+                        <div class="m-2">
+                            <p class="small text-uppercase pb-0">Toronto, Canada</p>
+                            <div class="card-body p-0">
+                                <h5 class="card-title">The Small Apartment</h5>
+                                <p class="card-text m-0">$70/night</p>
+                                <p class="small m-0 text-danger">&#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary"> 465</span></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6" id="prop5">
+                    <div class="card mb-3 border-0 shadow">
+                        <div id="carousel5" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carousel5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carousel5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carousel5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/h51.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h52.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h53.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a class="card-link" href="listing5.html">
+                        <div class="m-2">
+                            <p class="small text-uppercase pb-0">Toronto, Canada</p>
+                            <div class="card-body p-0">
+                                <h5 class="card-title">The Weird Home</h5>
+                                <p class="card-text m-0">$15/night</p>
+                                <p class="small m-0 text-danger">&#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary"> 465</span></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6" id="prop6">
+                    <div class="card mb-3 border-0 shadow">
+                        <div id="carousel6" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carousel6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carousel6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carousel6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/h61.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h62.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h63.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel6" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel6" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a class="card-link" href="listing6.html">
+                        <div class="m-2">
+                            <p class="small text-uppercase pb-0">Washington, USA</p>
+                            <div class="card-body p-0">
+                                <h5 class="card-title">The White House</h5>
+                                <p class="card-text m-0">$110/night</p>
+                                <p class="small m-0 text-danger">&#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary"> 465</span></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6" id="prop7">
+                    <div class="card mb-3 border-0 shadow">
+                        <div id="carousel7" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carousel7" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carousel7" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carousel7" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="images/h71.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h72.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="images/h73.jpg" class="card-img-top br0" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel7" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel7" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <a class="card-link" href="listing7.html">
+                        <div class="m-2">
+                            <p class="small text-uppercase pb-0">Toronto, Canada</p>
+                            <div class="card-body p-0">
+                                <h5 class="card-title">The Green Paradise</h5>
+                                <p class="card-text m-0">$180/night</p>
+                                <p class="small m-0 text-danger">&#9733;&#9733;&#9733;&#9733;&#9733;<span class="text-secondary"> 465</span></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        
+          
+          
+        
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      // Get URL
+      const urlParams = new URL(window.location.toLocaleString()).searchParams;
+      const loc = urlParams.get('location');
+      const guest = urlParams.get('guests');
+      var prop1 = document.getElementById('prop1');
+      var prop2 = document.getElementById('prop2');
+      var prop3 = document.getElementById('prop3');
+      var prop4 = document.getElementById('prop4');
+      var prop5 = document.getElementById('prop5');
+      var prop6 = document.getElementById('prop6');
+      var prop7 = document.getElementById('prop7');
+      // prop1
+      if( (loc == 'stockholm' || loc == 'sweden' || loc==null || loc=='') && ( guest < 5 || guest==null) ) {
+       // Display the message
+        prop1.style.display = "block";
+      }
+      // prop2
+      if( (loc == 'toronto' || loc == 'canada' || loc==null || loc=='') && ( guest < 6 || guest==null) ) {
+       // Display the message
+        prop2.style.display = "block";
+      }
+      // prop3
+      if( (loc == 'toronto' || loc == 'canada' || loc==null || loc=='') && ( guest < 8 || guest==null) ) {
+       // Display the message
+        prop3.style.display = "block";
+      }
+      // prop4
+      if( (loc == 'toronto' || loc == 'canada' || loc==null || loc=='') && ( guest < 2 || guest==null) ) {
+       // Display the message
+        prop4.style.display = "block";
+      }
+      // prop5 weird home
+      if( (loc == 'toronto' || loc == 'canada' || loc==null || loc=='') && ( guest < 2 || guest==null) ) {
+       // Display the message
+        prop5.style.display = "block";
+      }
+      // prop6
+      if( (loc == 'washington' || loc == 'usa' || loc==null || loc=='') && ( guest < 3 || guest==null) ) {
+       // Display the message
+        prop6.style.display = "block";
+      }
+      // prop7
+      if( (loc == 'toronto' || loc == 'canada' || loc==null || loc=='') && ( guest < 4 || guest==null) ) {
+       // Display the message
+        prop7.style.display = "block";
+      }
+
+      function myfunc() {
+        v = document.getElementById("selector").value;
+        if(v==1){
+          prop1.style.order = 1;
+          prop2.style.order = 2;
+          prop3.style.order = 3;
+          prop4.style.order = 4;
+          prop5.style.order = 5;
+          prop6.style.order = 6;
+          prop7.style.order = 7;
+
+        }
+        if(v==2){
+          prop1.style.order = 7;
+          prop2.style.order = 5;
+          prop3.style.order = 3;
+          prop4.style.order = 2;
+          prop5.style.order = 1;
+          prop6.style.order = 4;
+          prop7.style.order = 6;
+        }
+        if(v==3){
+          prop1.style.order = 1;
+          prop2.style.order = 3;
+          prop3.style.order = 5;
+          prop4.style.order = 6;
+          prop5.style.order = 7;
+          prop6.style.order = 4;
+          prop7.style.order = 2;
+
+        }
+      }
+    </script>
+    
+  </body>
+</html>

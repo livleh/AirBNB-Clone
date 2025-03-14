@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type=password], input[type=tel], input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin: 7px 0 12px 0;
+  display: inline-block;
+  border-style: solid;
+  background: white;
+}
+
+input:focus {
+  border-color: black;
+}
+
+main button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px; 
+  width: 30%;
+}
+
+#notif-badge{
+  margin-left:-15px;
+}
+#wrapper
+{
+ width:100px;
+ height:auto;
+ margin:0 auto;
+ position:absolute;
+ left:50%;
+ margin-left:-50px;
+ top: 16px;
+}

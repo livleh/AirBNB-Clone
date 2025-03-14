@@ -1,0 +1,131 @@
+
+@media (max-width: 1067px) {
+  #hideoverflow{
+      overflow:hidden;
+      width:100vw;
+  }
+  video{
+      height:600px;
+  }
+}
+@media (min-width: 1067px) {
+  video{
+      width:100vw;
+  }
+}
+video{
+  bottom:0;
+  position:absolute;
+}
+#hideoverflow{
+  height:600px;
+  position:absolute;
+  top: 50px;
+  left: 0;
+}
+#div-over-video-1{
+  top: 12px;
+  height:404px; /*588 to span whole video*/
+}
+.div-over-video-2{
+  top: 416px;
+  height:184px; /*588 to span whole video*/
+}
+.search-bar{
+  height:78px;
+  background-color:rgba(255,255,255,1);
+  padding-left:0;
+  padding-right:0;
+  width:980px;
+  margin-left:5px;
+  margin-right:5px;
+}
+.search{
+  background-color:rgba(255,0,0,1);
+  padding:0;
+  border:none;
+}
+@media (max-width: 991.5px) {
+
+
+  .search-bar{
+      height:240px;
+      width:auto;
+  }
+  #div-over-video-1{
+      top: 12px;
+      height:304px; /*588 to span whole video*/
+  }
+  .div-over-video-2{
+      top: 316px;
+      height:284px; /*588 to span whole video*/
+  }
+  .search-bar{
+      border-bottom-left-radius: var(--bs-border-radius) !important;
+      border-bottom-right-radius: var(--bs-border-radius) !important;
+  }
+  .search{
+      border-bottom-left-radius: var(--bs-border-radius) !important;
+      border-bottom-right-radius: var(--bs-border-radius) !important;
+      border-top-right-radius:0 !important;
+  }
+}
+.h-40{
+  height:40%;
+}
+.h-60{
+  height:60%;
+}
+.outline-none{
+  outline: none;
+  box-shadow: none;
+}
+select{
+  outline:none;
+}
+
+.smaller{
+  padding: .1rem 2.25rem .1rem .75rem;
+}
+
+#notif-badge{
+  margin-left:-15px;
+}
+
+.shady{
+  box-shadow: rgba(0, 0, 0, 0.65) 0px 10px 36px !important;
+}
+
+
+@media (min-width: 992px) {
+  .search-border{
+      border-right: 1px solid rgb(235, 235, 235) !important;
+  }
+}
+/*https://stackoverflow.com/questions/73561420/how-to-make-images-the-same-height-in-a-bootstrap-5-carousel*/
+.carousel-inner {
+  height: 0;
+  padding-bottom: 66%; /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.carousel-item {
+  position: absolute !important; /* Bootstrap is insistent */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-item img {
+  height: 100%; /* Bootstrap handles width already */
+  object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+.card-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+.box-icon {
+  transform: translatey(10px);
+}

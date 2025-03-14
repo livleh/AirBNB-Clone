@@ -1,0 +1,63 @@
+table {
+    border-spacing: 40px;
+
+}
+
+th, caption {
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+} 
+.carousel-inner {
+    height: 0;
+    padding-bottom: 600px; /* this sets carousel aspect ratio (4:1 here) */
+  }
+  
+  .carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .carousel-item img {
+    height: 600px; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+  }
+  .carousel{
+    height:600px;
+  }
+  #notif-badge{
+    margin-left:-15px;
+}
+#wrapper
+{
+ width:100px;
+ height:auto;
+ margin:0 auto;
+ position:absolute;
+ left:50%;
+ margin-left:-50px;
+ top: 16px;
+}
+.review-box {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0 0 0;
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  background: white;
+  overflow: auto;
+  resize: none;
+  height: 145px;
+}
+.info-text {
+  padding-left: 15px;
+}
+.red-stars {
+  color: #C0281A;
+}

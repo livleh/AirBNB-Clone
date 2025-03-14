@@ -1,0 +1,49 @@
+.icon {
+  margin-right: 10px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.cancel {
+  color: red;
+}
+
+.check {
+  color: green;
+}
+
+.star {
+  color: #C0281A;
+}
+
+.pending {
+  color: darkblue;
+}
+
+.notification-container {
+  background-color: white;
+}
+
+#dropdowny{
+  height:50vh;
+  width: 30vw;
+   overflow:auto;
+}
+
+.button-container {
+  margin-left: 40px;
+}
+
+#wrapper
+{
+ width:100px;
+ height:auto;
+ margin:0 auto;
+ position:absolute;
+ left:50%;
+ margin-left:-50px;
+ top: 16px;
+}

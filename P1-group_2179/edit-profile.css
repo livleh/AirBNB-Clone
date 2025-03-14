@@ -1,0 +1,58 @@
+#notif-badge{
+  margin-left:-15px;
+}
+* {
+  box-sizing: border-box
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type=text], input[type=tel], input[type=email], input[type=password] {
+  width: 100%;
+  min-width: none;
+  padding: 10px;
+  margin: 7px 0 12px 0;
+  display: inline-block;
+  border-style: solid;
+  background: white;
+}
+
+input:focus {
+  border-color: black;
+}
+
+button {
+  background-color: #C0281A;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px; 
+  border-style: solid;
+  cursor: pointer;
+}
+
+
+button:hover {
+  border-color: white;
+}
+
+.avatar {
+  display: none;
+}
+
+.avatar-label {
+  cursor: pointer;
+}
+#wrapper
+{
+ width:100px;
+ height:auto;
+ margin:0 auto;
+ position:absolute;
+ left:50%;
+ margin-left:-50px;
+ top: 16px;
+}
